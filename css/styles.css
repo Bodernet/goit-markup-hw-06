@@ -46,9 +46,11 @@ a {
     HEDER 
 ==================*/
 .heder {
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 .heder-inner {
   display: flex;
@@ -595,7 +597,7 @@ a {
 }
 
 .is-open {
-  opacity: 0;
+  opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
@@ -757,7 +759,11 @@ a {
   vertical-align: middle;
   color: #8e8f99;
 }
-
+.privacy-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .modal-checkbox-chek {
   color: #4d5ae5;
   font-size: 12px;
@@ -797,9 +803,10 @@ a {
   fill: #f4f4fd;
   opacity: 1;
 }
-.privacy-text {
+.privacy-text-police {
   color: #4d5ae5;
   text-decoration-line: underline;
+  padding-left: 3px;
 }
 
 /* ================
@@ -934,6 +941,9 @@ MOBILE MENU
   .section {
     padding: 96px 0;
   }
+  .heder {
+    max-width: 768px;
+        }
   .order-section {
     max-width: 768px;
     background-image: linear-gradient(
@@ -1088,6 +1098,9 @@ MOBILE MENU
   .section {
     padding: 120px 0;
   }
+  .heder {
+    max-width: 1440px;
+        }
   .order-section {
     max-width: 1440px;
     background-image: linear-gradient(
