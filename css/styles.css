@@ -57,6 +57,7 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
+
 }
 .logo {
   display: flex;
@@ -67,7 +68,9 @@ a {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
+  /* margin-right: 76px; */
+  padding-top: 17.5px;
+  padding-bottom: 17.5px;
 }
 .logo-accent {
   color: var(--color-gren);
@@ -139,6 +142,15 @@ a {
 .contacts-email-number:focus {
   color: var(--color-hover);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.phon-button {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ border: none;
+ cursor: pointer;
+ background-color: inherit;
 }
 
 /* ===============
@@ -244,7 +256,9 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-/* section our team */
+/* ===============
+    section our team
+==================*/
 .team-section {
   background-color: #f4f4fd;
   padding: 96px 0;
@@ -403,7 +417,9 @@ a {
   transform: translateY(0%);
 }
 
-/* footer */
+/* ===============
+    footer
+==================*/
 .footer-all {
   background: var(--color-gren);
   padding: 97.5px 0 96px;
@@ -552,7 +568,9 @@ a {
   margin-left: 16px;
 }
 
-/* modal */
+/* ===============
+    modal
+==================*/
 
 .backdrop {
   position: fixed;
@@ -687,7 +705,6 @@ a {
   fill: rgba(46, 47, 66, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-input:focus + .modal-icon {
   fill: #4d5ae5;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -771,7 +788,110 @@ a {
   text-decoration-line: underline;
 }
 
-/* MADIA */
+/* ================
+MOBILE MENU
+=================*/
+.mobil-container {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 72px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobil-container.is-open {
+  transform: translateX(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-btm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+position: absolute;
+top: 24px;
+right: 24px;
+min-width: 24px;
+min-height: 24px;
+background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+   background-color: #fff;
+   padding: 0;
+}
+
+.mobile-list {
+margin-bottom: auto;
+}
+.mobile-link {
+color: #2E2F42;
+font-size: 36px;
+font-weight: 700;
+line-height: 1.11;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+accent-color: #404BBF;
+}
+.mobile-link:hover {
+  color:#404BBF;
+}
+.mobile-link:active {
+  color:#404BBF;
+}
+.mobile-item:not(:last-child) {
+margin-bottom: 40px;
+}
+.mobile-addres {
+  margin-bottom: 48px;
+}
+.mobile-addres-linc:not(:last-child) {
+margin-bottom: 24px;
+}
+.mobile-email-number {
+color: #2E2F42;
+accent-color:  #4D5AE5;
+font-size: 20px;
+font-weight: 500;
+line-height: 1.2;
+letter-spacing: 0.02em;
+}
+.mobile-social {
+  display: flex;
+  gap: 40px;
+  height: 40px;
+  align-items: baseline;
+}
+.mobile-social-icons {
+   width: 40px;
+  height: 40px;
+  padding: 0;
+}
+.mobile-soc-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  fill: #f4f4fd;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.mobile-icon {
+   width: 24px;
+  height: 24px;
+}
+
+/* MEDIA */
 @media screen and (min-width: 320px) {
   .company-icon {
     display: none;
@@ -781,6 +901,16 @@ a {
     border: 1px solid var(--CLOUD, #f4f4fd);
     background: var(--WHITE, #fff);
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  }
+ 
+}
+@media only screen and (max-width: 767px) {
+
+  .nav-list {
+    display: none;
+  }
+  .addres-tel-mail {
+    display: none;
   }
 }
 
@@ -795,6 +925,20 @@ a {
   .section {
     padding: 96px 0;
   }
+
+  .phon-button {
+    display: none;
+  }
+  .heder-addres {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+      }
+  .contacts-email-number {
+    margin-bottom: 12px;
+  }
+
   /* ===============
     company
 ==================*/
@@ -893,6 +1037,16 @@ a {
   }
   .section {
     padding: 120px 0;
+  }
+
+  .phon-button {
+    display: none;
+  }
+  .heder-addres {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 24px 0;
   }
   /* ===============
     section about company
