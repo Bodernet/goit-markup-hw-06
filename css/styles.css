@@ -38,8 +38,6 @@ a {
   max-width: 320px;
   margin: 0 auto;
   padding: 0 16px;
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 .section {
   padding: 96px 16px;
@@ -938,8 +936,6 @@ letter-spacing: 0.02em;
     max-width: 768px;
     padding: 0 16px;
     margin: 0 auto;
-    outline: 2px solid red;
-    outline-offset: -2px;
   }
   .section {
     padding: 96px 0;
@@ -1096,8 +1092,7 @@ letter-spacing: 0.02em;
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
-    outline: 2px solid red;
-    outline-offset: -2px;
+  
   }
   .section {
     padding: 120px 0;
