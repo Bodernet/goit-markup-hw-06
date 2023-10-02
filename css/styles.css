@@ -130,7 +130,8 @@ a {
   color: #434455;
   font-size: 16px;
   font-weight: 400;
-  line-height: 150%;
+  font-style: normal;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -155,7 +156,6 @@ a {
     section title
 ==================*/
 .order-section {
-  max-width: 320px;
   background-color: var(--color-gren);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -582,6 +582,7 @@ a {
 
 .backdrop {
   position: fixed;
+  z-index: 50;
   inset: 0;
   background-color: rgba(46, 47, 66, 0.4);
   display: flex;
@@ -607,11 +608,11 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  width: calc(100% -32px);
+  max-width: 408x;
   background-color: #fcfcfc;
-  width: 288px;
-  height: 623px;
-  max-width: 288x;
-  max-height: 623px;
+    height: 623px;
+    max-height: 623px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
   padding: 72px 16px 24px;
@@ -685,6 +686,7 @@ a {
 }
 .modal-input {
   display: block;
+  width: 100%;
   width: 256px;
   max-width: 256px;
   height: 40px;
@@ -723,6 +725,7 @@ a {
 }
 .modal-textarea {
   display: block;
+  width: 100%;
   max-width: 255px;
   width: 336px;
   max-height: 120px;
@@ -881,6 +884,7 @@ MOBILE MENU
   accent-color: #4d5ae5;
   font-size: 20px;
   font-weight: 500;
+  font-style: normal;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
@@ -945,7 +949,6 @@ MOBILE MENU
     max-width: 768px;
         }
   .order-section {
-    max-width: 768px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1102,6 +1105,7 @@ MOBILE MENU
     max-width: 1440px;
         }
   .order-section {
+    width: 1440px;
     max-width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
